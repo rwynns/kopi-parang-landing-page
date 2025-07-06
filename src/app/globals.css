@@ -2,11 +2,6 @@
 
 @import "tailwindcss";
 
-@theme {
-  --font-heading: 'JetBrains Mono';
-  --font-body: 'Poppins', sans-serif;
-}
-
 @layer utilities {
   /* Existing animations */
   @keyframes fade-in-left {
