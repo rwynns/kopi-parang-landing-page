@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { JetBrains_Mono } from "next/font/google";
 import { Poppins } from "next/font/google";
-import { ArrowLeft } from "lucide-react"; // Import icon dari lucide-react
+import { ArrowLeft } from "lucide-react";
 
 const headingFont = JetBrains_Mono({ subsets: ["latin"] });
 const bodyFont = Poppins({ subsets: ["latin"], weight: ["400"] });
@@ -20,7 +20,7 @@ const Coffee = () => {
       </div>
 
       <h1 className={`${headingFont.className} text-center text-white text-8xl font-bold`}>NON-COFFEE & MOCKTAIL</h1>
-      <p className={`${bodyFont.className} text-center text-white text-lg mt-4`}>Experience the rich and bold flavors of our coffee selection.</p>
+      <p className={`${bodyFont.className} text-center text-white text-lg mt-4`}>Enjoy the refreshing taste of our non-coffee beverages and mocktails with exceptional flavors.</p>
 
       <div className="w-full max-w-6xl mt-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -49,7 +49,7 @@ const Coffee = () => {
 
       <AnimateOnScroll animation="animate-fade-in-right" delay="delay-500">
         <div className="w-full max-w-6xl mt-4 bg-amber-100">
-          <Image width={3000} height={3000} className="w-full h-auto" src="/images/coffee/menu-coffee.png" alt="Kopi Parang menu coffee" />
+          <Image width={3000} height={3000} className="w-full h-auto" src="/images/non-coffee-and-mocktail/menu-milk-based.png" alt="Kopi Parang menu coffee" />
         </div>
       </AnimateOnScroll>
 
@@ -77,10 +77,7 @@ const Coffee = () => {
 
       <AnimateOnScroll animation="animate-fade-in-right" delay="delay-500">
         <div className="w-full max-w-6xl mt-4 bg-amber-100">
-          <Image width={3000} height={3000} className="w-full h-auto" src="/images/menu-coffee.png" alt="Kopi Parang menu coffee" />
-          <div className="absolute inset-0 bg-black/70 flex items-center justify-center">
-            <h3 className="text-white text-2xl font-bold text-center">Example Photo</h3>
-          </div>
+          <Image width={3000} height={3000} className="w-full h-auto" src="/images/non-coffee-and-mocktail/menu-mocktail-and-homemade.png" alt="Kopi Parang menu coffee" />
         </div>
       </AnimateOnScroll>
     </div>
