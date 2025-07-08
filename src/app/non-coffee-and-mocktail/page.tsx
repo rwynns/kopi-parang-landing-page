@@ -41,7 +41,7 @@ const Coffee = () => {
         </div>
       </div>
 
-      <AnimateOnLoad animation="animate-fade-in-up" delay="delay-500">
+      <AnimateOnLoad animation="animate-zoom-in" delay="delay-500">
         <div className="mt-2">
           <Image width={200} height={200} src="/images/logo-white.png" alt="Kopi Parang logo" />
         </div>

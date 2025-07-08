@@ -19,7 +19,7 @@ const Coffee = () => {
         </Link>
       </div>
 
-      <h1 className={`{${headingFont.className} uppercase text-8xl font-bold text-center text-white`}>COFFEE</h1>
+      <h1 className={`${headingFont.className} uppercase text-8xl font-bold text-center text-white`}>COFFEE</h1>
       <p className={`${bodyFont.className} text-center text-white text-lg mt-4`}>Experience the rich and bold flavors of our coffee selection.</p>
 
       <div className="w-full max-w-6xl mt-10">
@@ -41,7 +41,7 @@ const Coffee = () => {
         </div>
       </div>
 
-      <AnimateOnLoad animation="animate-fade-in-up" delay="delay-500">
+      <AnimateOnLoad animation="animate-zoom-in" delay="delay-500">
         <div className="mt-2">
           <Image width={200} height={200} src="/images/logo-white.png" alt="Kopi Parang logo" />
         </div>
