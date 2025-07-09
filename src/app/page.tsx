@@ -16,7 +16,7 @@ export default function Home() {
             <Link href="/coffee" className="block group">
               <div className="rounded-lg overflow-hidden">
                 <div className="aspect-[3/2] relative bg-gray-800 cursor-pointer">
-                  <Image fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-all duration-300" src="/images/coffee/2.png" alt="Coffee" />
+                  <Image fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-all duration-300" src="/images/coffee.png" alt="Coffee" />
                   {/* Overlay and text that appear on hover */}
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -32,7 +32,7 @@ export default function Home() {
             <Link href="/non-coffee-and-mocktail" className="block group">
               <div className="rounded-lg overflow-hidden">
                 <div className="aspect-[3/2] relative bg-gray-800 cursor-pointer">
-                  <Image fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-all duration-300" src="/images/non-coffee-and-mocktail/4.png" alt="Non-Coffee & Mocktail" />
+                  <Image fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-all duration-300" src="/images/mocktail.png" alt="Non-Coffee & Mocktail" />
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span className={`${headingFont.className} text-white text-base sm:text-lg lg:text-xl font-bold px-3 py-2 sm:px-4 rounded-xl bg-black/50`}>See here</span>
@@ -53,16 +53,16 @@ export default function Home() {
                     <span className={`${headingFont.className} text-white text-base sm:text-lg lg:text-xl font-bold px-3 py-2 sm:px-4 rounded-xl bg-black/50`}>See here</span>
                   </div>
                 </div>
-                <h1 className={`${headingFont.className} text-base sm:text-lg font-semibold text-white p-2 transition-colors duration-300 group-hover:text-amber-400`}>Buttersome</h1>
+                <h1 className={`${headingFont.className} text-base sm:text-lg font-semibold text-white p-2 transition-colors duration-300 group-hover:text-amber-400`}>Bites</h1>
               </div>
             </Link>
           </AnimateOnLoad>
 
           <AnimateOnLoad animation="animate-fade-in-right" delay="delay-500">
             <div className="rounded-lg overflow-hidden">
-              <div className="aspect-[3/2] relative bg-gray-900/50">
+              <div className="aspect-[3/2] relative bg-gray-800">
                 <Image fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-all duration-300 grayscale" src="/images/logo parang 2.png" alt="Merchandise" />
-                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-black/50"></div>
                 <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300">
                   <span className={`${headingFont.className} text-white text-base sm:text-lg lg:text-xl font-bold px-3 py-2 sm:px-4 rounded-xl bg-black`}>Coming Soon</span>
                 </div>
