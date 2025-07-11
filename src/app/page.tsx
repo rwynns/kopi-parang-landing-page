@@ -44,7 +44,7 @@ export default function Home() {
           </AnimateOnLoad>
 
           <AnimateOnLoad animation="animate-fade-in-left" delay="delay-500">
-            <Link href="/" className="block group">
+            <Link href="/bites" className="block group">
               <div className="rounded-lg overflow-hidden">
                 <div className="aspect-[3/2] relative bg-gray-800 cursor-pointer">
                   <Image fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-all duration-300" src="/images/Bites.png" alt="Buttersome" />
