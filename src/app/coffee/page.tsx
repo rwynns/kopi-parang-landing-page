@@ -69,7 +69,7 @@ const Coffee = () => {
 
       <AnimateOnScroll animation="animate-fade-in-right" delay="delay-500">
         <div className="w-full max-w-7xl mt-6 sm:mt-8 mb-8 relative">
-          <Image width={3000} height={3000} className="w-full h-auto" src="/images/coffee/5.png" alt="Kopi Parang menu coffee" />
+          <Image width={3000} height={3000} className="w-full h-auto" src="/images/coffee/5.jpg" alt="Kopi Parang menu coffee" />
         </div>
       </AnimateOnScroll>
     </div>

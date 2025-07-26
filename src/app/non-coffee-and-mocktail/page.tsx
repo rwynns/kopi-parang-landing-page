@@ -27,13 +27,13 @@ const Coffee = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           <AnimateOnLoad animation="animate-fade-in-left" delay="delay-500">
             <div className="bg-gray-900 rounded-lg overflow-hidden relative">
-              <Image width={0} height={0} sizes="(max-width: 768px) 100vw, 50vw" className="w-full h-auto" src="/images/non-coffee-and-mocktail/1.png" alt="Non-Coffee Beverage" />
+              <Image width={0} height={0} sizes="(max-width: 768px) 100vw, 50vw" className="w-full h-auto" src="/images/non-coffee-and-mocktail/1.jpg" alt="Non-Coffee Beverage" />
             </div>
           </AnimateOnLoad>
 
           <AnimateOnLoad animation="animate-fade-in-right" delay="delay-500">
             <div className="bg-gray-900 rounded-lg overflow-hidden">
-              <Image width={0} height={0} sizes="(max-width: 768px) 100vw, 50vw" className="w-full h-auto" src="/images/non-coffee-and-mocktail/2.png" alt="Non-Coffee Beverage" />
+              <Image width={0} height={0} sizes="(max-width: 768px) 100vw, 50vw" className="w-full h-auto" src="/images/non-coffee-and-mocktail/2.jpg" alt="Non-Coffee Beverage" />
             </div>
           </AnimateOnLoad>
         </div>
@@ -55,13 +55,13 @@ const Coffee = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           <AnimateOnScroll animation="animate-fade-in-left" delay="delay-300">
             <div className="rounded-lg overflow-hidden relative">
-              <Image width={0} height={0} sizes="(max-width: 768px) 100vw, 50vw" className="w-full h-auto" src="/images/non-coffee-and-mocktail/3.png" alt="Beverage Example" />
+              <Image width={0} height={0} sizes="(max-width: 768px) 100vw, 50vw" className="w-full h-auto" src="/images/non-coffee-and-mocktail/3.jpg" alt="Beverage Example" />
             </div>
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="animate-fade-in-right" delay="delay-500">
             <div className="rounded-lg overflow-hidden relative">
-              <Image width={0} height={0} sizes="(max-width: 768px) 100vw, 50vw" className="w-full h-auto" src="/images/non-coffee-and-mocktail/4.png" alt="Beverage Example" />
+              <Image width={0} height={0} sizes="(max-width: 768px) 100vw, 50vw" className="w-full h-auto" src="/images/non-coffee-and-mocktail/4.jpg" alt="Beverage Example" />
             </div>
           </AnimateOnScroll>
         </div>
