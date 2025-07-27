@@ -27,7 +27,7 @@ const Bites = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           <AnimateOnLoad animation="animate-fade-in-left" delay="delay-500">
             <div className="bg-gray-900 rounded-lg overflow-hidden relative">
-              <Image width={0} height={0} sizes="(max-width: 768px) 100vw, 50vw" className="w-full h-auto" src="/images/bites/1.jpg" alt="Arabica Beans" />
+              <Image width={0} height={0} sizes="(max-width: 768px) 100vw, 50vw" className="w-full h-auto" src="/images/coffee/1.png" alt="Arabica Beans" />
             </div>
           </AnimateOnLoad>
 
@@ -61,7 +61,7 @@ const Bites = () => {
 
           <AnimateOnScroll animation="animate-fade-in-right" delay="delay-500">
             <div className="rounded-lg overflow-hidden relative">
-              <Image width={0} height={0} sizes="(max-width: 768px) 100vw, 50vw" className="w-full h-auto" src="/images/bites/4.png" alt="Arabica Beans" />
+              <Image width={0} height={0} sizes="(max-width: 768px) 100vw, 50vw" className="w-full h-auto" src="/images/coffee/4.png" alt="Arabica Beans" />
             </div>
           </AnimateOnScroll>
         </div>
