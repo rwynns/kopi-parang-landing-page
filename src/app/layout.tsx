@@ -30,11 +30,11 @@ export const metadata: Metadata = {
   robots: "index, follow",
   icons: {
     icon: [
-      { url: "/icon.png", sizes: "32x32", type: "image/png" },
-      { url: "/icon.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+      { url: "/icon.png", sizes: "192x192", type: "image/png" },
     ],
     apple: [{ url: "/icon.png", sizes: "180x180", type: "image/png" }],
-    shortcut: "/icon.png",
+    shortcut: "/favicon.ico",
   },
   openGraph: {
     title: "Kopi Parang",
@@ -71,9 +71,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="icon" href="/icon.png" sizes="any" />
-        <link rel="apple-touch-icon" href="/icon.png" />
+
+        {/* Favicon configuration with cache busting */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/icon.png?v=2" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/icon.png?v=2" />
+        <link rel="shortcut icon" href="/favicon.ico?v=2" />
+
+        {/* Windows tile */}
         <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="msapplication-TileImage" content="/icon.png" />
+
+        {/* Force favicon refresh */}
+        <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta httpEquiv="Pragma" content="no-cache" />
+        <meta httpEquiv="Expires" content="0" />
       </head>
       <body className={`${poppins.className} antialiased`}>{children}</body>
     </html>
