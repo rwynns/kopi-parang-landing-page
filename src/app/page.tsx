@@ -14,7 +14,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           <AnimateOnLoad animation="animate-fade-in-left" delay="delay-500">
             <Link href="/coffee" className="block group">
-              <div className="rounded-lg overflow-hidden">
+              <div className="rounded-xl overflow-hidden">
                 <div className="aspect-[3/2] relative bg-gray-800 cursor-pointer">
                   <Image fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-all duration-300" src="/images/coffee.png" alt="Coffee" />
                   {/* Overlay and text that appear on hover */}
