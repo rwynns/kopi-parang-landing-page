@@ -32,7 +32,7 @@ export default function Home() {
             <Link href="/non-coffee-and-mocktail" className="block group">
               <div className="rounded-lg overflow-hidden">
                 <div className="aspect-[3/2] relative bg-gray-800 cursor-pointer">
-                  <Image fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-all duration-300" src="/images/mocktail.png" alt="Non-Coffee & Mocktail" />
+                  <Image fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-all duration-300" src="/images/mocktail.jpg" alt="Non-Coffee & Mocktail" />
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span className={`${headingFont.className} text-white text-base sm:text-lg lg:text-xl font-bold px-3 py-2 sm:px-4 rounded-xl bg-black/50`}>See here</span>
