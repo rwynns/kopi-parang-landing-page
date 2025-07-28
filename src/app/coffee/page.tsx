@@ -2,12 +2,8 @@ import AnimateOnLoad from "@/components/AnimateOnLoad";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import Image from "next/image";
 import Link from "next/link";
-import { JetBrains_Mono } from "next/font/google";
-import { Poppins } from "next/font/google";
-import { ArrowLeft } from "lucide-react"; // Import icon dari lucide-react
-
-const headingFont = JetBrains_Mono({ subsets: ["latin"] });
-const bodyFont = Poppins({ subsets: ["latin"], weight: ["400"] });
+import { headingFont, bodyFont } from "@/lib/fonts";
+import { ArrowLeft } from "lucide-react";
 
 const Coffee = () => {
   return (
@@ -27,13 +23,33 @@ const Coffee = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           <AnimateOnLoad animation="animate-fade-in-left" delay="delay-500">
             <div className="bg-gray-900 rounded-lg overflow-hidden relative">
-              <Image width={0} height={0} sizes="(max-width: 768px) 100vw, 50vw" className="w-full h-auto" src="/images/coffee/1.png" alt="Arabica Beans" />
+              <Image
+                width={800}
+                height={600}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="w-full h-auto"
+                src="/images/coffee/1.png"
+                alt="Premium Arabica Coffee Beans"
+                priority
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyLAKcqvvNe2g0R0j8UJKNgA/8AFUGpvEOaGVMAg="
+              />
             </div>
           </AnimateOnLoad>
 
           <AnimateOnLoad animation="animate-fade-in-right" delay="delay-500">
             <div className="bg-gray-900 rounded-lg overflow-hidden">
-              <Image width={0} height={0} sizes="(max-width: 768px) 100vw, 50vw" className="w-full h-auto" src="/images/coffee/2.png" alt="Arabica Beans" />
+              <Image
+                width={800}
+                height={600}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="w-full h-auto"
+                src="/images/coffee/2.png"
+                alt="Coffee Brewing Process"
+                priority
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyLAKcqvvNe2g0R0j8UJKNgA/8AFUGpvEOaGVMAg="
+              />
             </div>
           </AnimateOnLoad>
         </div>
@@ -41,13 +57,29 @@ const Coffee = () => {
 
       <AnimateOnLoad animation="animate-zoom-in" delay="delay-500">
         <div className="mt-6 sm:mt-8">
-          <Image width={200} height={200} className="w-40 h-40 sm:w-48 sm:h-48 lg:w-52 lg:h-52" src="/images/logo-white.png" alt="Kopi Parang logo" />
+          <Image
+            width={208}
+            height={208}
+            className="w-40 h-40 sm:w-48 sm:h-48 lg:w-52 lg:h-52"
+            src="/images/logo-white.png"
+            alt="Kopi Parang Logo"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyLAKcqvvNe2g0R0j8UJKNgA/8AFUGpvEOaGVMAg="
+          />
         </div>
       </AnimateOnLoad>
 
       <AnimateOnScroll animation="animate-fade-in-right" delay="delay-500">
         <div className="w-full max-w-6xl mt-6 sm:mt-8">
-          <Image width={3000} height={3000} className="w-full h-auto" src="/images/coffee/menu-coffee.png" alt="Kopi Parang menu coffee" />
+          <Image
+            width={3000}
+            height={3000}
+            className="w-full h-auto"
+            src="/images/coffee/menu-coffee.png"
+            alt="Kopi Parang Coffee Menu"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyLAKcqvvNe2g0R0j8UJKNgA/8AFUGpvEOaGVMAg="
+          />
         </div>
       </AnimateOnScroll>
 
@@ -55,13 +87,31 @@ const Coffee = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           <AnimateOnScroll animation="animate-fade-in-left" delay="delay-300">
             <div className="rounded-lg overflow-hidden relative">
-              <Image width={0} height={0} sizes="(max-width: 768px) 100vw, 50vw" className="w-full h-auto" src="/images/coffee/3.png" alt="Arabica Beans" />
+              <Image
+                width={800}
+                height={600}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="w-full h-auto"
+                src="/images/coffee/3.png"
+                alt="Coffee Preparation Techniques"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyLAKcqvvNe2g0R0j8UJKNgA/8AFUGpvEOaGVMAg="
+              />
             </div>
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="animate-fade-in-right" delay="delay-500">
             <div className="rounded-lg overflow-hidden relative">
-              <Image width={2000} height={3000} sizes="(max-width: 768px) 100vw, 50vw" className="w-full h-auto" src="/images/coffee/4.png" alt="Arabica Beans" />
+              <Image
+                width={800}
+                height={1200}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="w-full h-auto"
+                src="/images/coffee/4.png"
+                alt="Special Coffee Blend"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyLAKcqvvNe2g0R0j8UJKNgA/8AFUGpvEOaGVMAg="
+              />
             </div>
           </AnimateOnScroll>
         </div>
@@ -69,7 +119,15 @@ const Coffee = () => {
 
       <AnimateOnScroll animation="animate-fade-in-right" delay="delay-500">
         <div className="w-full max-w-7xl mt-6 sm:mt-8 mb-8 relative">
-          <Image width={3000} height={3000} className="w-full h-auto" src="/images/coffee/5.jpg" alt="Kopi Parang menu coffee" />
+          <Image
+            width={1400}
+            height={1400}
+            className="w-full h-auto"
+            src="/images/coffee/5.jpg"
+            alt="Coffee Shop Interior Experience"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyLAKcqvvNe2g0R0j8UJKNgA/8AFUGpvEOaGVMAg="
+          />
         </div>
       </AnimateOnScroll>
     </div>

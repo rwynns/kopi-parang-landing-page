@@ -2,12 +2,8 @@ import AnimateOnLoad from "@/components/AnimateOnLoad";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import Image from "next/image";
 import Link from "next/link";
-import { JetBrains_Mono } from "next/font/google";
-import { Poppins } from "next/font/google";
+import { headingFont, bodyFont } from "@/lib/fonts";
 import { ArrowLeft } from "lucide-react";
-
-const headingFont = JetBrains_Mono({ subsets: ["latin"] });
-const bodyFont = Poppins({ subsets: ["latin"], weight: ["400"] });
 
 const Kombucha = () => {
   return (
@@ -30,7 +26,40 @@ const Kombucha = () => {
 
       <AnimateOnLoad animation="animate-zoom-in" delay="delay-500">
         <div className="w-full max-w-6xl mt-8 sm:mt-12 lg:mt-16 flex justify-center">
-          <Image width={550} height={550} className="w-64 h-64 sm:w-80 sm:h-80 lg:w-auto lg:h-auto max-w-full" src="/images/kombucha/mascot.png" alt="Kopi Parang logo" />
+          <Image
+            width={550}
+            height={550}
+            className="w-64 h-64 sm:w-80 sm:h-80 lg:w-auto lg:h-auto max-w-full"
+            src="/images/kombucha/mascot.png"
+            alt="Kopi Parang Kombucha Mascot"
+            priority
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyLAKcqvvNe2g0R0j8UJKNgA/8AFUGpvEOaGVMAg="
+          />
+        </div>
+      </AnimateOnLoad>
+
+      {/* Logo Section */}
+      <AnimateOnLoad animation="animate-zoom-in" delay="delay-700">
+        <div className="mt-6 sm:mt-8 flex items-center justify-center gap-6 sm:gap-8">
+          <Image
+            width={208}
+            height={208}
+            className="w-32 h-32 sm:w-40 sm:h-40 lg:w-44 lg:h-44 rounded-full object-cover"
+            src="/images/logo-white.png"
+            alt="Kopi Parang Logo"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyLAKcqvvNe2g0R0j8UJKNgA/8AFUGpvEOaGVMAg="
+          />
+          <Image
+            width={208}
+            height={208}
+            className="w-32 h-32 sm:w-40 sm:h-40 lg:w-44 lg:h-44 rounded-full object-cover"
+            src="/images/logo-buttersome.jpg"
+            alt="Buttersome Logo"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJCtODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyLAKcqvvNe2g0R0j8UJKNgA/8AFUGpvEOaGVMAg="
+          />
         </div>
       </AnimateOnLoad>
 
@@ -86,19 +115,43 @@ const Kombucha = () => {
 
       <AnimateOnScroll animation="animate-fade-in-right" delay="delay-500">
         <div className="w-full max-w-6xl mt-8 sm:mt-12 px-4 sm:px-6 lg:px-8">
-          <Image width={3000} height={3000} className="w-full h-auto" src="/images/kombucha/2.png" alt="Kopi Parang menu coffee" />
+          <Image
+            width={1200}
+            height={1200}
+            className="w-full h-auto"
+            src="/images/kombucha/2.png"
+            alt="Kombucha Variety Collection"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyLAKcqvvNe2g0R0j8UJKNgA/8AFUGpvEOaGVMAg="
+          />
         </div>
       </AnimateOnScroll>
 
       <AnimateOnScroll animation="animate-fade-in-right" delay="delay-500">
         <div className="w-full max-w-6xl mt-4 px-4 sm:px-6 lg:px-8">
-          <Image width={3000} height={3000} className="w-full h-auto" src="/images/kombucha/3.png" alt="Kopi Parang menu coffee" />
+          <Image
+            width={1200}
+            height={1200}
+            className="w-full h-auto"
+            src="/images/kombucha/3.png"
+            alt="Premium Kombucha Flavors"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyLAKcqvvNe2g0R0j8UJKNgA/8AFUGpvEOaGVMAg="
+          />
         </div>
       </AnimateOnScroll>
 
       <AnimateOnScroll animation="animate-fade-in-right" delay="delay-500">
         <div className="w-full max-w-6xl mt-4 mb-8 px-4 sm:px-6 lg:px-8">
-          <Image width={3000} height={3000} className="w-full h-auto" src="/images/kombucha/4.png" alt="Kopi Parang menu coffee" />
+          <Image
+            width={1200}
+            height={1200}
+            className="w-full h-auto"
+            src="/images/kombucha/4.png"
+            alt="Artisanal Kombucha Brewing Process"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyLAKcqvvNe2g0R0j8UJKNgA/8AFUGpvEOaGVMAg="
+          />
         </div>
       </AnimateOnScroll>
     </div>

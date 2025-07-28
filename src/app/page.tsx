@@ -1,9 +1,7 @@
 import Image from "next/image";
-import Link from "next/link"; // Import Link component
+import Link from "next/link";
 import AnimateOnLoad from "@/components/AnimateOnLoad";
-import { JetBrains_Mono } from "next/font/google";
-
-const headingFont = JetBrains_Mono({ subsets: ["latin"] });
+import { headingFont } from "@/lib/fonts";
 
 export default function Home() {
   return (
@@ -16,8 +14,16 @@ export default function Home() {
             <Link href="/coffee" className="block group">
               <div className="rounded-xl overflow-hidden">
                 <div className="aspect-[3/2] relative bg-gray-800 cursor-pointer">
-                  <Image fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-all duration-300" src="/images/coffee.png" alt="Coffee" />
-                  {/* Overlay and text that appear on hover */}
+                  <Image
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition-all duration-300"
+                    src="/images/coffee.png"
+                    alt="Coffee Selection"
+                    priority
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyLAKcqvvNe2g0R0j8UJKNgA/8AFUGpvEOaGVMAg=="
+                  />
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span className={`${headingFont.className} text-white text-base sm:text-lg lg:text-xl font-bold px-3 py-2 sm:px-4 rounded-xl bg-black/50`}>See here</span>
@@ -32,7 +38,16 @@ export default function Home() {
             <Link href="/non-coffee-and-mocktail" className="block group">
               <div className="rounded-lg overflow-hidden">
                 <div className="aspect-[3/2] relative bg-gray-800 cursor-pointer">
-                  <Image fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-all duration-300" src="/images/mocktail.jpg" alt="Non-Coffee & Mocktail" />
+                  <Image
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition-all duration-300"
+                    src="/images/mocktail.jpg"
+                    alt="Non-Coffee & Mocktail Selection"
+                    priority
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyLAKcqvvNe2g0R0j8UJKNgA/8AFUGpvEOaGVMAg="
+                  />
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span className={`${headingFont.className} text-white text-base sm:text-lg lg:text-xl font-bold px-3 py-2 sm:px-4 rounded-xl bg-black/50`}>See here</span>
@@ -47,7 +62,16 @@ export default function Home() {
             <Link href="/bites" className="block group">
               <div className="rounded-lg overflow-hidden">
                 <div className="aspect-[3/2] relative bg-gray-800 cursor-pointer">
-                  <Image fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-all duration-300" src="/images/Bites.png" alt="Buttersome" />
+                  <Image
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition-all duration-300"
+                    src="/images/Bites.png"
+                    alt="Bites Selection"
+                    priority
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyLAKcqvvNe2g0R0j8UJKNgA/8AFUGpvEOaGVMAg="
+                  />
                   <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-40 transition-opacity duration-300"></div>
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span className={`${headingFont.className} text-white text-base sm:text-lg lg:text-xl font-bold px-3 py-2 sm:px-4 rounded-xl bg-black/50`}>See here</span>
@@ -61,7 +85,15 @@ export default function Home() {
           <AnimateOnLoad animation="animate-fade-in-right" delay="delay-500">
             <div className="rounded-lg overflow-hidden">
               <div className="aspect-[3/2] relative bg-gray-800">
-                <Image fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition-all duration-300 grayscale" src="/images/logo parang 2.png" alt="Merchandise" />
+                <Image
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-all duration-300 grayscale"
+                  src="/images/logo parang 2.png"
+                  alt="Merchandise - Coming Soon"
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyLAKcqvvNe2g0R0j8UJKNgA/8AFUGpvEOaGVMAg="
+                />
                 <div className="absolute inset-0 bg-black/50"></div>
                 <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300">
                   <span className={`${headingFont.className} text-white text-base sm:text-lg lg:text-xl font-bold px-3 py-2 sm:px-4 rounded-xl bg-black`}>Coming Soon</span>
